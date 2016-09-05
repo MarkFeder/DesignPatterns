@@ -1,27 +1,27 @@
 ========================================================================
-    CONSOLE APPLICATION : DesignPatterns Project Overview
+    CONSOLE APPLICATION : PrototypePattern Project Overview
 ========================================================================
 
-AppWizard has created this DesignPatterns application for you.
+AppWizard has created this PrototypePattern application for you.
 
 This file contains a summary of what you will find in each of the files that
-make up your DesignPatterns application.
+make up your PrototypePattern application.
 
 
-DesignPatterns.vcxproj
+PrototypePattern.vcxproj
     This is the main project file for VC++ projects generated using an Application Wizard.
     It contains information about the version of Visual C++ that generated the file, and
     information about the platforms, configurations, and project features selected with the
     Application Wizard.
 
-DesignPatterns.vcxproj.filters
+PrototypePattern.vcxproj.filters
     This is the filters file for VC++ projects generated using an Application Wizard. 
     It contains information about the association between the files in your project 
     and the filters. This association is used in the IDE to show grouping of files with
     similar extensions under a specific node (for e.g. ".cpp" files are associated with the
     "Source Files" filter).
 
-DesignPatterns.cpp
+PrototypePattern.cpp
     This is the main application source file.
 
 /////////////////////////////////////////////////////////////////////////////
@@ -29,7 +29,7 @@ Other standard files:
 
 StdAfx.h, StdAfx.cpp
     These files are used to build a precompiled header (PCH) file
-    named DesignPatterns.pch and a precompiled types file named StdAfx.obj.
+    named PrototypePattern.pch and a precompiled types file named StdAfx.obj.
 
 /////////////////////////////////////////////////////////////////////////////
 Other notes:
@@ -39,17 +39,19 @@ should add to or customize.
 
 /////////////////////////////////////////////////////////////////////////////
 
-####### Builder Pattern #######
-The Builder Creational Pattern is used to separate the construction of a complex object from
-its representation so that the same construction process can create different objects representations.
+####### Prototype Pattern #######
 
+A prototype pattern is used in software development when the type of objects 
+to create is determined by a prototypical instance, which is cloned to produce new objects. 
+This pattern is used, for example, when the inherent cost of creating a new object in 
+the standard way (e.g., using the new keyword) is prohibitively expensive for a given application.
 
-####### Problem #######
-We want to construct a complex object, however we do not want to have a complex constructor
-member or one that would need many arguments.
+####### Implementation #######
 
+Declare an abstract base class that specifies a pure virtual clone() method. Any class that needs 
+a "polymorphic constructor" capability derives itself from the abstract base class, and implements 
+the clone() operation.
 
-####### Solution #######
-Define an intermediate object whose member functions define the desired object part by part
-before the object is available to the client.Builder Pattern lets us defer the construction
-of the object until all the options for creation have been specified.
+Here the client code first invokes the factory method. This factory method, depending on the 
+parameter, finds out the concrete class. On this concrete class, the clone() method is called 
+and the object is returned by the factory method.
