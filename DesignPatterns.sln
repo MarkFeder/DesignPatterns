@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DesignPatterns", "DesignPatterns\DesignPatterns.vcxproj", "{245050AC-A0A9-4719-8901-4B429C2238BF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BuilderPattern", "DesignPatterns\DesignPatterns.vcxproj", "{245050AC-A0A9-4719-8901-4B429C2238BF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FactoryPattern", "FactoryPattern\FactoryPattern.vcxproj", "{759AE665-FE6C-4718-965B-572EEBD602BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{245050AC-A0A9-4719-8901-4B429C2238BF}.Release|x64.Build.0 = Release|x64
 		{245050AC-A0A9-4719-8901-4B429C2238BF}.Release|x86.ActiveCfg = Release|Win32
 		{245050AC-A0A9-4719-8901-4B429C2238BF}.Release|x86.Build.0 = Release|Win32
+		{759AE665-FE6C-4718-965B-572EEBD602BC}.Debug|x64.ActiveCfg = Debug|x64
+		{759AE665-FE6C-4718-965B-572EEBD602BC}.Debug|x64.Build.0 = Debug|x64
+		{759AE665-FE6C-4718-965B-572EEBD602BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{759AE665-FE6C-4718-965B-572EEBD602BC}.Debug|x86.Build.0 = Debug|Win32
+		{759AE665-FE6C-4718-965B-572EEBD602BC}.Release|x64.ActiveCfg = Release|x64
+		{759AE665-FE6C-4718-965B-572EEBD602BC}.Release|x64.Build.0 = Release|x64
+		{759AE665-FE6C-4718-965B-572EEBD602BC}.Release|x86.ActiveCfg = Release|Win32
+		{759AE665-FE6C-4718-965B-572EEBD602BC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
