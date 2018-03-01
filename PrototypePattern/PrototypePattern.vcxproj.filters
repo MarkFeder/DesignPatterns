@@ -32,5 +32,8 @@
     <ClCompile Include="PrototypePattern.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Prototype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

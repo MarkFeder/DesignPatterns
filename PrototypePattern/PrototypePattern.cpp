@@ -54,7 +54,7 @@ public:
 		std::cout << "HamAndMushroomPizza destructor called!" << std::endl;
 	};
 
-	virtual std::unique_ptr<Pizza> clone() override
+	virtual std::unique_ptr<Pizza> clone()
 	{
 		return std::make_unique<HamAndMushroomPizza>(*this);
 	}
@@ -81,7 +81,7 @@ public:
 		std::cout << "BaconAndCheesePizza destructor called!" << std::endl;
 	};
 
-	virtual std::unique_ptr<Pizza> clone() override
+	virtual std::unique_ptr<Pizza> clone()
 	{
 		return std::make_unique<BaconAndCheesePizza>(*this);
 	}
@@ -108,7 +108,7 @@ public:
 		std::cout << "Deluxe destructor called!" << std::endl;
 	};
 
-	virtual std::unique_ptr<Pizza> clone() override
+	virtual std::unique_ptr<Pizza> clone()
 	{
 		return std::make_unique<DeluxePizza>(*this);
 	}

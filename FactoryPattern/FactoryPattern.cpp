@@ -96,6 +96,9 @@ public:
 
 			case Deluxe:
 				return std::make_unique<DeluxePizza>();
+
+			default: 
+				return nullptr;
 		}
 	}
 
@@ -104,18 +107,3 @@ public:
 		std::cout << "PizzaFactory destructor called!" << std::endl;
 	}
 };
-
-
-int main()
-{
-	PizzaFactory* Factory = new PizzaFactory();
-
-	auto pizza = Factory->CreateNewPizza(PizzaFactory::PizzaType::HamAndMushroom);
-
-	pizza->ShowPrice();
-
-	delete Factory;
-
-	return EXIT_SUCCESS;
-}
-
