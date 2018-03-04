@@ -156,7 +156,8 @@ int main()
 	auto pizza = pPizzaFactory->CreatePizza(PizzaType::HamAndMushroom);
 	pizza->ShowPrice();
 
-	delete pPizzaFactory;
+	auto scnd_pizza = pPizzaFactory->CreatePizza(PizzaType::BaconAndCheese);
+	scnd_pizza->ShowPrice();
 
 	return EXIT_SUCCESS;
 }

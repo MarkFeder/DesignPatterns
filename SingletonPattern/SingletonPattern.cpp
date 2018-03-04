@@ -20,25 +20,22 @@ public:
 	}
 
 	// Magic function
-	static StringSingleton& Instance()
+	static StringSingleton* Instance()
 	{
-		static StringSingleton *instance = new StringSingleton;
+		static StringSingleton instance;
 
 		// returns same instance
-		return *instance;
+		return &instance;
 	}
 
-private:
-
-	StringSingleton() {}
-
-	~StringSingleton() {}
-
 	// Prevent from copy
-	StringSingleton(const StringSingleton& old) {}
-	const StringSingleton& operator=(const StringSingleton& old) {}
+	StringSingleton(const StringSingleton& old) = delete;
+	const StringSingleton& operator=(const StringSingleton& old) = delete;
 
 private:
+	
+	StringSingleton() = default;
+	~StringSingleton() = default;
 
 	std::string m_String;
 };
@@ -46,10 +43,10 @@ private:
 int main()
 {
 	std::cout << "Comparing both calls ... " << std::endl;
-	std::cout << "first call: "<< &StringSingleton::Instance() << " address" << std::endl;
-	std::cout << "second call: " << &StringSingleton::Instance() << " address" << std::endl;
+	std::cout << "first call: "<< StringSingleton::Instance() << " address" << std::endl;
+	std::cout << "second call: " << StringSingleton::Instance() << " address" << std::endl;
 
-	assert(&StringSingleton::Instance() == &StringSingleton::Instance());
+	assert(StringSingleton::Instance() == StringSingleton::Instance());
 
 	return 0;
 }
